@@ -1,5 +1,3 @@
-const { ObjectId } = require('mongodb');
-
 const getCollection = require('./get-connection');
 
 const getByEmail = async ({ email }) =>
@@ -13,5 +11,4 @@ const create = async (name, email, password) =>
 module.exports = {
   getByEmail,
   create,
-  /* getById, */
 };
