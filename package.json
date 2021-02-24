@@ -1,0 +1,31 @@
+{
+  "name": "jubsCleitonCars",
+  "version": "1.0.0",
+  "description": "Aqui serão encontrados os detalhes de como o projeto foi estruturado. #vqv 🚀",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:watch": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hleoc/Projeto-Carupi-Jubscleiton.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hleoc/Projeto-Carupi-Jubscleiton/issues"
+  },
+  "homepage": "https://github.com/hleoc/Projeto-Carupi-Jubscleiton#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

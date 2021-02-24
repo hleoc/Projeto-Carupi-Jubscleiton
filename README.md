@@ -20,7 +20,7 @@ Atributos de um Carro são:
 ## Instruções para a instalação do projeto:
 
 1. Clone o repositório
-  * `git clone https://github.com/tryber/Projeto-Carupi-Jubscleiton.git`.
+  * `git clone git@github.com:hleoc/Projeto-Carupi-Jubscleiton.git`.
   * Entre na pasta do repositório que você acabou de clonar:
     * `cd Projeto-Carupi-Jubscleiton`
 
