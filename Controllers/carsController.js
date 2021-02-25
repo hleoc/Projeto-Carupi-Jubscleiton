@@ -37,6 +37,12 @@ cars.get('/', async (_req, res) => {
   return res.status(200).json(allCars);
 });
 
+cars.get('/search', async (req, res) => {
+  console.log(req.query);
+  const allCars = await service.getAll();
+  return res.status(200).json(allCars);
+});
+
 cars.put('/:id', auth, async (req, res) => {
   try {
     const { id } = req.params;
