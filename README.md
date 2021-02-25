@@ -66,6 +66,10 @@ A coleção de carros terá o seguinte nome: `cars`.
 
 O projeto deve rodar na porta 3000, podendo ser acessado em http://localhost/3000 .
 
+### Cobertura de testes unitários
+
+- A cobertura de testes unitários do back-end deve ser de, no mínimo, 90%.
+
 ### Melhorias Futuras
 
 Adicionar dados sensíveis ao arquivo de ambiente(.env).
