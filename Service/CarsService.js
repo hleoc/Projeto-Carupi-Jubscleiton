@@ -28,8 +28,22 @@ const update = async (id, brand, modelo, version, year, mileage, exchangeType, s
   return model.update(id, { brand, modelo, version, year, mileage, exchangeType, salePrice }, userId);
 };
 
+const getById = async (id) => {
+  const car = await model.getById(id);
+  if (!car) {
+    return {
+      error: true,
+      code: 'invalid_data',
+      message: 'recipe not found',
+      statusCode: 404,
+    };
+  }
+  return car;
+};
+
 module.exports = {
   getAll,
   create,
   update,
+  getById,
 };

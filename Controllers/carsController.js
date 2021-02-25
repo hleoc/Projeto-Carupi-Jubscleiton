@@ -62,4 +62,17 @@ cars.put('/:id', auth, async (req, res) => {
   }
 });
 
+cars.get('/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const car = await service.getById(id);
+    if (car.error) {
+      return res.status(car.statusCode).json({ message: car.message });
+    }
+    return res.status(200).json(car);
+  } catch (error) {
+    return res.status(500).json({ message: 'Algo de errado não está certo' });
+  }
+});
+
 module.exports = cars;
