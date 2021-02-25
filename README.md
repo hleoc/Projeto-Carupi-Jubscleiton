@@ -27,20 +27,13 @@ Atributos de um Carro são:
 2. Instale as dependências
   * `npm install`
 
-## O que será desenvolvido
+## O que foi desenvolvido
 
-Será desenvolvido uma plataforma utilizando a arquitetura MSC!
+Foi desenvolvido uma plataforma utilizando a arquitetura MSC!
 
-Nesse projeto será possível fazer o cadastramento e login de usuário, onde apenas esse usúario poderá acessar, Criar, Listar, Editar e Visualizar um carro.
+Nesse projeto é possível fazer o cadastramento e login de usuário, onde apenas esse usúario poderá Acessar, Criar, Listar, Editar, Visualizar um carro específico e Deletar um carro específico(ou `CRUD`, para os mais íntimos 😜).
 
-
-## Desenvolvimento
-
-Serão desenvolvidas todas as camadas da aplicação (Models, Service e Controllers).
-
-Através dessa aplicação, será possível realizar as operações básicas que se pode fazer em um determinado banco de dados: Criação, Leitura, Atualização e Exclusão (ou `CRUD`, para os mais íntimos 😜).
-
-Para realizar qualquer tipo de alteração no banco de dados (como cadastro, edição ou exclusão de carros) será necessário autenticar-se. 
+Para realizar qualquer tipo de alteração no banco de dados como cadastro, edição ou exclusão de carros será necessário autenticar-se. 
 
 A autenticação deverá ser feita via `JWT`.
 
@@ -65,11 +58,14 @@ const DB_NAME = 'Jubscleiton';
 
 ### Tabelas
 
-O banco terá duas tabelas: usuários e carros.
+O banco terá duas coleções: usuários e carros.
 
-A tabela de usuários terá o seguinte nome: `users`.
+A coleção de usuários terá o seguinte nome: `users`.
 
-A tabela de carros terá o seguinte nome: `cars`.
+A coleção de carros terá o seguinte nome: `cars`.
 
-O projeto deve rodar na porta http://localhost/3000
+O projeto deve rodar na porta 3000, podendo ser acessado em http://localhost/3000 .
 
+### Melhorias Futuras
+
+Adicionar dados sensíveis ao arquivo de ambiente(.env).
