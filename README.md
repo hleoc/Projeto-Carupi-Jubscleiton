@@ -27,6 +27,7 @@ Atributos de um Carro são:
 2. Instale as dependências
   * `npm install`
 
+
 ## O que foi desenvolvido
 
 Foi desenvolvido uma plataforma utilizando a arquitetura MSC!
@@ -49,6 +50,7 @@ O Projeto Jubs Cleiton's Cars será realiado utilizando o mongoDB como banco de 
 
 
 ### Conexão com o Banco:
+
 A conexão do banco local deverá conter os seguintes parâmetros:
 
 ```javascript
@@ -66,9 +68,11 @@ A coleção de carros terá o seguinte nome: `cars`.
 
 O projeto deve rodar na porta 3000, podendo ser acessado em http://localhost/3000 .
 
+
 ### Cobertura de testes unitários
 
-- A cobertura de testes unitários do back-end deve ser de, no mínimo, 90%.
+- Foram cobertos alguns recursos do código com testes unitários com Jest
+
 
 ### Melhorias Futuras
 
