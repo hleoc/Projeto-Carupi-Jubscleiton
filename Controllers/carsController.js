@@ -71,7 +71,18 @@ cars.get('/:id', async (req, res) => {
     }
     return res.status(200).json(car);
   } catch (error) {
-    return res.status(500).json({ message: 'Algo de errado não está certo' });
+    return res.status(500).json({ message: 'Algo está errado.' });
+  }
+});
+
+cars.delete('/:id', auth, async (req, res) => {
+  try {
+    const { id } = req.params;
+    const removeCar = await service.remove(id);
+    if (!auth) return res.status(401).json({ message: 'missing auth token' });
+    return res.status(204).json(removeCar);
+  } catch (error) {
+    return res.status(500).json({ message: 'Algo está errado.' });
   }
 });
 

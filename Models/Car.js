@@ -22,9 +22,15 @@ const update = async (id, { brand, modelo, version, year, mileage, exchangeType,
   return { _id: id, brand, modelo, version, year, mileage, exchangeType, salePrice, userId };
 };
 
+const exclude = async (id) => {
+  if (!ObjectId.isValid(id)) return null;
+  return getCollection('cars').then(car => car.deleteOne({ _id: ObjectId(id) }));
+};
+
 module.exports = {
   getAll,
   create,
   getById,
   update,
+  exclude,
 };

@@ -41,9 +41,23 @@ const getById = async (id) => {
   return car;
 };
 
+const remove = async (id) => {
+  const car = await model.exclude(id);
+  if (!car) {
+    return {
+      error: true,
+      code: 'invalid_data',
+      message: 'Algo deu errado',
+      statusCode: 500,
+    };
+  }
+  return car;
+};
+
 module.exports = {
   getAll,
   create,
   update,
   getById,
+  remove,
 };
