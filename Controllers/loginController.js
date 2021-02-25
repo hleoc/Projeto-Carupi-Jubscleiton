@@ -9,7 +9,7 @@ const login = Router();
 const secret = 'secretPassword';
 
 const jwtConfig = {
-  expiresIn: '15m',
+  expiresIn: '15d',
   algorithm: 'HS256',
 };
 

@@ -47,8 +47,6 @@ A autenticação deverá ser feita via `JWT`.
 
 ### Data de Entrega
 
-QUINTA-FEIRA (25/02) ÀS 18H
-
 O projeto tem até a seguinte data para ser entregue: `25/02/2021 - 18:00h`.
 
 
