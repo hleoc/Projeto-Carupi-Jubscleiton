@@ -1,4 +1,5 @@
 const frisby = require('frisby');
+const jest;
 const { MongoClient } = require('mongodb');
 
 const mongoDbUrl = 'mongodb://localhost:27017/Jubscleiton';

@@ -38,9 +38,18 @@ cars.get('/', async (_req, res) => {
 });
 
 cars.get('/search', async (req, res) => {
-  console.log(req.query);
-  const allCars = await service.getAll();
-  return res.status(200).json(allCars);
+  // const searchs = [{nome: 'brand', valor: brand}, {nome: modelo}, {nome: version}, {nome: 'year', valor: year}, {nome: mileage}, {nome: exchangeType}, {nome: salePrice}];
+  // console.log(searchs.filter(({valor}) => valor))
+  
+  try {
+    const { brand, modelo, version, initialYear, lastYear, mileage, exchangeType, salePrice } = req.query;
+    const allCars = await service.getAllDois(brand, modelo, version, initialYear, lastYear, mileage, exchangeType, salePrice);
+    return res.status(200).json(allCars);
+    
+  } catch (error) {
+    console.error(error.message);
+    return res.status(500).json({ message: 'Algo está errado.' });
+  }
 });
 
 cars.put('/:id', auth, async (req, res) => {

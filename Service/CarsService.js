@@ -2,6 +2,35 @@ const model = require('../Models/Car');
 
 const getAll = async () => model.getAll();
 
+const getAllDois = async (brand, modelo, version, initialYear, lastYear, mileage, exchangeType, salePrice) => {
+  const carros = {};
+  if (brand) {
+    carros.brand = brand;
+  }
+  if (modelo) {
+    carros.modelo = modelo;
+  }
+  if (version) {
+    carros.version = version;
+  }
+  if (initialYear) {
+    carros.initialYear = initialYear;
+  }
+  if (lastYear) {
+    carros.lastYear = lastYear;
+  }
+  if (mileage) {
+    carros.mileage = mileage;
+  }
+  if (exchangeType) {
+    carros.exchangeType = exchangeType;
+  }
+  if (salePrice) {
+    carros.salePrice = salePrice;
+  }
+  return model.getAllDois(carros)
+}
+
 const create = async (brand, modelo, version, year, mileage, exchangeType, salePrice, userId) => {
   if (!brand || !modelo || !version || !year || !mileage || !exchangeType || !salePrice) {
     return {
@@ -60,4 +89,5 @@ module.exports = {
   update,
   getById,
   remove,
+  getAllDois,
 };
